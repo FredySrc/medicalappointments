@@ -1,0 +1,116 @@
+﻿@model medical_appointments.Models.Patient
+
+@{
+    ViewData["tilte"] = "Editar Datos del  Paciente";
+}
+
+<h2>Editar Datos del Paciente</h2>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PatientId" />
+            <div class="form-row">
+                <label class="col-sm-4">Nombres y aplellid del paciente</label>
+                <div class="form-group col-md-4">
+                    <input asp-for="PatientFullName" class="form-control" />
+                    <label asp-for="PatientFullName" class="control-label"></label>
+                    <span asp-validation-for="PatientFullName" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-4">
+                    <input asp-for="PatientSurname" class="form-control" />
+                    <label asp-for="PatientSurname" class="control-label col-sm-8"></label>
+                    <span asp-validation-for="PatientSurname"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="col-sm-4">Correo Electronico</label>
+                <div class="form-group col-md-8">
+                    <input asp-for="PatientEmail" class="form-control" />
+                    <label asp-for="PatientEmail" class="control-label"></label>
+                    <span asp-validation-for="PatientEmail" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="col-sm-4">Nombre del Acompañante</label>
+                <div class="form-group col-md-4">
+                    <input asp-for="PatientCompanionName" class="form-control" />
+                    <label asp-for="PatientCompanionName" class="control-label"></label>
+                    <span asp-validation-for="PatientCompanionName" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-4">
+                    <input asp-for="PatientCompanionSurname" class="form-control" />
+                    <label asp-for="PatientCompanionSurname" class="control-label"></label>
+                    <span asp-validation-for="PatientCompanionSurname" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="col-sm-4">Dirección</label>
+                <div class="form-group col-md-8">
+                    <input asp-for="PatientStreetAddress" class="form-control" />
+                    <label asp-for="PatientStreetAddress" class="control-label"></label>
+                    <span asp-validation-for="PatientStreetAddress" class="text-danger"></span>
+                </div>
+                <label class="col-sm-4"></label>
+                <div class="form-group col-md-8">
+                    <input asp-for="PatientStreetAddressTwo" class="form-control" />
+                    <label asp-for="PatientStreetAddressTwo" class="control-label"></label>
+                    <span asp-validation-for="PatientStreetAddressTwo" class="text-danger"></span>
+                </div>
+                <label class="col-sm-4"></label>
+                <div class="form-group col-md-4">
+                    <input asp-for="PatientCity" class="form-control" />
+                    <label asp-for="PatientCity" class="control-label"></label>
+                    <span asp-validation-for="PatientCity" class="text-danger"></span>
+                </div><div class="form-group col-md-4">
+                    <input asp-for="PatientProvince" class="form-control" />
+                    <label asp-for="PatientProvince" class="control-label"></label>
+                    <span asp-validation-for="PatientProvince" class="text-danger"></span>
+                </div>
+                <label class="col-sm-4"></label>
+                <div class="form-group col-md-8">
+                    <input asp-for="PatientPostaCode" class="form-control" />
+                    <label asp-for="PatientPostaCode" class="control-label"></label>
+                    <span asp-validation-for="PatientPostaCode" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="col-sm-4">Número de teléfono</label>
+                <div class="form-group col-md-4">
+                    <input asp-for="PatientNumberCode" class="form-control" />
+                    <label asp-for="PatientNumberCode" class="control-label"></label>
+                    <span asp-validation-for="PatientNumberCode" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <input asp-for="PatientNumber" class="form-control" />
+                    <label asp-for="PatientNumber" class="control-label"></label>
+                    <span asp-validation-for="PatientNumber" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="col-sm-4">Número de Whatsapp</label>
+                <div class="form-group col-md-4">
+                    <input asp-for="PatientNumberCode" class="form-control" />
+                    <label asp-for="PatientNumberCode" class="control-label"></label>
+                    <span asp-validation-for="PatientNumberCode" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <input asp-for="PatientNumberWhatsapp" class="form-control" />
+                    <label asp-for="PatientNumberWhatsapp" class="control-label"></label>
+                    <span asp-validation-for="PatientNumberWhatsapp" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group float-right m-3">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Guardar</button>
+                <a asp-action="Index" class="btn btn-warning"> <i class="fas fa-step-backward"></i> Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

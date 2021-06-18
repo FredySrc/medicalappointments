@@ -1,0 +1,121 @@
+﻿@model medical_appointments.Models.Patient
+
+@{
+    ViewData["title"] = "Detalles";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Paciente</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientFullName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientFullName)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientSurname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientSurname)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientEmail)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientEmail)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientCompanionName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientCompanionName)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientCompanionSurname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientCompanionSurname)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientStreetAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientStreetAddress)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientStreetAddressTwo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientStreetAddressTwo)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientCity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientCity)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientProvince)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientProvince)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientPostaCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientPostaCode)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientNumberCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientNumberCode)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientNumber)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientNumberWhatsapp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PatientNumberWhatsapp)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model.PatientId"><i class="fas fa-sticky-note"></i> Editar</a>
+    <a asp-action="Index" class="btn btn-success"><i class="fas fa-backward"></i> Regresar</a>
+</div>
