@@ -8,11 +8,11 @@
 }
 
 
-const departments_input_search = document.getElementById("txt-search");
+const patients_input_search = document.getElementById("txt-search");
 
-departments_input_search.addEventListener("keyup", function (event) {
+patients_input_search.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
-        departments_search();
+        patients_search();
     }
 });
